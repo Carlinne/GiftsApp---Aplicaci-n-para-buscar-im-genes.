@@ -1,0 +1,27 @@
+<!-- //10. Mostrar los resultados en pantalla. -->
+<!-- <ul>
+    <li *ngFor="let gif of resultados">
+        {{gif.title}}
+    </li>
+</ul> -->
+<div class="row">
+    <div *ngFor="let gif of resultados" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{ gif.title }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 11.LocalStorages
+¿Como grabamos en el localstorages?
+-->
+<!-- Abrimos la consola del navegador y nos vamos a la pestaña Application veremos que hay un espacio especial llamado 
+    storage y tenemos el "Local Storages" y el "Sesion Storages" ambos nos sirven para almacenar información y que quede 
+    persistente en el navegador web, la diferencia es que en SessionStorages lo que escriban en el navegador al cerrarlo
+    y volverlo a abrir ya no estará dicha información a diferencia de LocalStorages lo que ustedes trabajen en el navegador
+    va ser persistente hasta que el usuario borre cache o la computadora necesite espacio y limpie todo el navegador web-->
